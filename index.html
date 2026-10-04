@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eunseo Jeong | CV</title>
+<meta name="description" content="Eunseo Jeong, AI researcher who starts from empathy and follows through to solutions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #000000;
+    --ink: #FFFFFF;
+    --muted: #A3A3AD;
+    --line: #26262B;
+    --accent: #B4AAFF;
+    --warm: #F2A93B;
+    --chip: #18181C;
+    color-scheme: dark;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    word-break: keep-all;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 46rem; margin: 0 auto; padding: 4.5rem 1.5rem 5rem; }
+
+  header { padding-bottom: 2.5rem; border-bottom: 1px solid var(--line); }
+  h1 {
+    font-family: "Gowun Batang", "Nanum Myeongjo", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(2.6rem, 8vw, 3.6rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+  }
+  h1::after {
+    content: "";
+    position: absolute;
+    left: -0.15em; right: -0.15em; bottom: 0.08em;
+    height: 0.32em;
+    background: var(--warm);
+    opacity: 0.45;
+    z-index: -1;
+    border-radius: 2px;
+  }
+  .lede {
+    font-family: "Gowun Batang", "Nanum Myeongjo", Georgia, serif;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin: 1.1rem 0 1.4rem;
+  }
+  .contact { display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; margin: 0; padding: 0; list-style: none; font-size: 0.93rem; }
+  .contact a { color: var(--muted); text-decoration: none; border-bottom: 1px solid transparent; }
+  .contact a:hover { color: var(--accent); border-bottom-color: currentColor; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  .top { display: flex; align-items: center; gap: 1.6rem; }
+  .photo {
+    position: relative; flex: none;
+    width: 6.5rem; height: 6.5rem; border-radius: 50%;
+    background: var(--chip); border: 1px solid var(--line);
+    display: grid; place-items: center; overflow: hidden;
+    font-family: "Gowun Batang", Georgia, serif; font-size: 1.8rem; color: var(--muted);
+  }
+  .photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .interests { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin: 1.1rem 0 0; }
+  .interests .label { color: var(--muted); font-size: 0.9rem; margin-right: 0.3rem; }
+  .about { margin: 2.5rem 0 0; color: var(--ink); max-width: 40rem; }
+
+  section { margin-top: 3.2rem; }
+  h2 {
+    font-family: "Gowun Batang", "Nanum Myeongjo", Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 0 0 1.2rem;
+  }
+  .entry {
+    display: grid;
+    grid-template-columns: 8.5rem 1fr;
+    gap: 0 1.5rem;
+    padding: 1.1rem 0;
+    border-top: 1px solid var(--line);
+  }
+  .entry:first-of-type { border-top: 0; padding-top: 0; }
+  .when { color: var(--muted); font-size: 0.9rem; padding-top: 0.15rem; font-variant-numeric: tabular-nums; }
+  .now { color: var(--accent); font-weight: 600; }
+  h3 { font-size: 1.05rem; font-weight: 600; margin: 0; line-height: 1.5; }
+  .role { color: var(--muted); font-size: 0.93rem; margin: 0.1rem 0 0; }
+  .award { display: inline-block; margin-left: 0.4rem; font-size: 0.8rem; font-weight: 600; color: var(--ink); background: color-mix(in srgb, var(--warm) 40%, transparent); padding: 0.05rem 0.5rem; border-radius: 999px; vertical-align: 0.1em; }
+  ul.points { margin: 0.5rem 0 0; padding-left: 1.1rem; }
+  ul.points li { margin: 0.2rem 0; }
+  ul.points li::marker { color: var(--accent); }
+
+  .skills { display: grid; grid-template-columns: 8.5rem 1fr; gap: 0.9rem 1.5rem; margin: 0; }
+  .skills dt { color: var(--muted); font-size: 0.9rem; padding-top: 0.25rem; }
+  .skills dd { margin: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .tag { background: var(--chip); padding: 0.15rem 0.65rem; border-radius: 6px; font-size: 0.92rem; }
+
+  footer { margin-top: 4rem; color: var(--muted); font-size: 0.82rem; }
+
+  @media (max-width: 560px) {
+    .top { gap: 1.1rem; }
+    .photo { width: 4.8rem; height: 4.8rem; font-size: 1.4rem; }
+    .page { padding-top: 3rem; }
+    .entry, .skills { grid-template-columns: 1fr; }
+    .when { padding-top: 0; margin-bottom: 0.15rem; }
+    .skills dt { padding-top: 0; }
+    .skills dd { margin-bottom: 0.4rem; }
+  }
+  @media print {
+    :root { --bg: #fff; --ink: #1a1a1a; --muted: #555; --line: #ddd; --accent: #3d33a8; --chip: #f1f1f1; padding: 0; }
+    .page { padding: 0; max-width: none; }
+    section { margin-top: 1.8rem; break-inside: avoid-page; }
+    .entry { break-inside: avoid; }
+    footer { display: none; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+  <header>
+    <div class="top">
+      <div class="photo" aria-hidden="true">EJ<img src="profile.jpg" alt="" onerror="this.remove()"></div>
+      <h1>Eunseo Jeong</h1>
+    </div>
+    <p class="lede">AI researcher who starts from empathy and follows through to solutions.</p>
+    <ul class="contact">
+      <li><a href="mailto:jeunseo0903@sookmyung.ac.kr">jeunseo0903@sookmyung.ac.kr</a></li>
+      <li><a href="tel:+821052166809">+82 10-5216-6809</a></li>
+      <li><a href="https://www.linkedin.com/in/%EC%9D%80%EC%84%9C-%EC%A0%95-81485a386" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/eunseo0903" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+    <p class="about">I start by understanding the people behind a problem, then build solutions that actually work. Currently researching LLM-based agents and decoupling knowledge from reasoning.</p>
+    <p class="interests"><span class="label">Interests</span><span class="tag">LLM Agents</span><span class="tag">Task Planning</span></p>
+  </header>
+
+  <section aria-labelledby="research">
+    <h2 id="research">Research</h2>
+    <div class="entry">
+      <div class="when"><span class="now">May 2026 – Present</span></div>
+      <div>
+        <h3>Memory Retrieval for Decoupling Knowledge and Reasoning in LLMs</h3>
+        <ul class="points">
+          <li>Researching methods to retrieve relevant knowledge from external memory in LLM architectures that separate knowledge from reasoning</li>
+          <li>Investigating which reranking methods work best for retrieval experiments</li>
+          <li>Studying ways to improve reasoning on multi-hop questions</li>
+        </ul>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="when"><span class="now">Jul 2026 – Present</span></div>
+      <div>
+        <h3>Scene-Graph-Based Task Planning for Robot Agents</h3>
+        <ul class="points">
+          <li>Reproducing a paper that structures the environment as a scene graph to plan tasks for robot agents</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="projects">
+    <h2 id="projects">Projects &amp; Awards</h2>
+    <div class="entry">
+      <div class="when">2025</div>
+      <div>
+        <h3>UNID Datathon <span class="award">Special Award</span></h3>
+        <ul class="points">
+          <li>Developed a query-based vision-language model (VLM) that predicts the location of tables and charts within documents</li>
+        </ul>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="when">Prometheus, 9th cohort</div>
+      <div>
+        <h3>Video Editing Agent Platform</h3>
+        <ul class="points">
+          <li>Designed the agent architecture and implemented inter-agent connections using multi-agent orchestration</li>
+          <li>Designed and built the platform&rsquo;s UI/UX</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="activities">
+    <h2 id="activities">Activities</h2>
+    <div class="entry">
+      <div class="when">9th – 10th cohort</div>
+      <div>
+        <h3>Prometheus</h3>
+        <p class="role">Member</p>
+        <ul class="points">
+          <li>Studied AI agents and built an agent project with the team</li>
+          <li>Currently studying Physical AI</li>
+        </ul>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="when">7th cohort</div>
+      <div>
+        <h3>GDGoC Sookmyung</h3>
+        <p class="role">Organizer, AI/ML Team</p>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="when">2024 – 2025</div>
+      <div>
+        <h3>Student Council, Division of AI Engineering</h3>
+        <p class="role">Head of Public Relations</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="education">
+    <h2 id="education">Education</h2>
+    <div class="entry">
+      <div class="when">Expected Jul 2027</div>
+      <div>
+        <h3>Sookmyung Women&rsquo;s University</h3>
+        <p class="role">B.S. in Artificial Intelligence Engineering, Second Major in Big Data</p>
+        <p class="role">GPA 4.0 / 4.5</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="skills">
+    <h2 id="skills">Skills &amp; Certifications</h2>
+    <dl class="skills">
+      <dt>Languages</dt>
+      <dd><span class="tag">Python</span><span class="tag">SQL</span></dd>
+      <dt>Deep Learning</dt>
+      <dd><span class="tag">PyTorch</span><span class="tag">Hugging Face Transformers</span><span class="tag">PEFT / LoRA</span></dd>
+      <dt>LLM &amp; Agents</dt>
+      <dd><span class="tag">LangChain</span><span class="tag">LangGraph</span><span class="tag">vLLM</span></dd>
+      <dt>Retrieval</dt>
+      <dd><span class="tag">FAISS</span><span class="tag">BM25</span></dd>
+      <dt>Development</dt>
+      <dd><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">Git</span><span class="tag">Docker</span></dd>
+      <dt>Data</dt>
+      <dd><span class="tag">Tableau</span></dd>
+      <dt>Certifications</dt>
+      <dd><span class="tag">SQLD (SQL Developer)</span><span class="tag">Engineer Information Processing (written exam passed)</span></dd>
+    </dl>
+  </section>
+
+  <footer>Last updated Oct 2026</footer>
+</main>
+</body>
+</html>
