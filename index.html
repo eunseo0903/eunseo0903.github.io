@@ -100,6 +100,9 @@
   .now { color: var(--accent); font-weight: 600; }
   h3 { font-size: 1.05rem; font-weight: 600; margin: 0; line-height: 1.5; }
   .role { color: var(--muted); font-size: 0.93rem; margin: 0.1rem 0 0; }
+  .role strong { color: var(--ink); font-weight: 600; }
+  .role a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
+  .role a:hover { color: var(--accent); }
   .award { display: inline-block; margin-left: 0.4rem; font-size: 0.8rem; font-weight: 600; color: var(--ink); background: color-mix(in srgb, var(--warm) 40%, transparent); padding: 0.05rem 0.5rem; border-radius: 999px; vertical-align: 0.1em; }
   ul.points { margin: 0.5rem 0 0; padding-left: 1.1rem; }
   ul.points li { margin: 0.2rem 0; }
@@ -172,6 +175,18 @@
     </div>
   </section>
 
+  <section aria-labelledby="publications">
+    <h2 id="publications">Publications</h2>
+    <div class="entry">
+      <div class="when">2026</div>
+      <div>
+        <h3>An Analysis of Oracle Reranking and Link Traversal in Long-Term Conversational Memory QA</h3>
+        <p class="role"><strong>Eunseo Jeong</strong>, Chulyun Kim</p>
+        <p class="role">Korea Database Conference (KDBC 2026)</p>
+      </div>
+    </div>
+  </section>
+
   <section aria-labelledby="projects">
     <h2 id="projects">Projects &amp; Awards</h2>
     <div class="entry">
@@ -184,11 +199,15 @@
       </div>
     </div>
     <div class="entry">
-      <div class="when">Prometheus, 9th cohort</div>
+      <div class="when">May – Aug 2026</div>
       <div>
-        <h3>Video Editing Agent Platform</h3>
+        <h3>Vibe Edit: Natural-Language Video Editing Agent</h3>
+        <p class="role">Prometheus, 9th cohort &middot; <a href="https://github.com/eunseo0903/2026-1-prometheus-4-team-vibeedit" target="_blank" rel="noopener">GitHub</a></p>
         <ul class="points">
-          <li>Designed the agent architecture and implemented inter-agent connections using multi-agent orchestration</li>
+          <li>Built a multi-agent service that lets beginner creators edit videos with natural-language instructions</li>
+          <li>Designed a LangGraph supervisor architecture that spawns editing, text, audio and effect sub-agents</li>
+          <li>Implemented a Gemini-based video understanding tool, Whisper-based subtitle extraction and a text agent</li>
+          <li>Integrated the supervisor, sub-agents and tools into a single agent graph</li>
           <li>Designed and built the platform&rsquo;s UI/UX</li>
         </ul>
       </div>
@@ -256,7 +275,7 @@
     </dl>
   </section>
 
-  <footer>Last updated Oct 2026</footer>
+  <footer>Last updated Nov 2026</footer>
 </main>
 </body>
 </html>
